@@ -10,6 +10,7 @@ class CreateHeadquartersTables extends Migration
 		$fields = [
 			'name'           => ['type' => 'varchar', 'constraint' => 31],
 			'url'            => ['type' => 'varchar', 'constraint' => 31],
+			'level'          => ['type' => 'int', 'null' => true],
 			'synched_at'     => ['type' => 'datetime', 'null' => true],
 			'created_at'     => ['type' => 'datetime', 'null' => true],
 			'updated_at'     => ['type' => 'datetime', 'null' => true],
@@ -23,6 +24,13 @@ class CreateHeadquartersTables extends Migration
 		$this->forge->addKey(['deleted_at', 'id']);
 		
 		$this->forge->createTable('servers');
+		
+		$db = db_connect();
+		$row = [
+			'name'   => 'Headquarters',
+			'url'    => site_url('agents'),
+		];
+		$db->table('servers')->insert($row);
 		
 		// Agents-Servers
 		$fields = [
