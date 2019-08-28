@@ -1,0 +1,36 @@
+{
+    "name": "tatter/headquarters",
+    "type": "project",
+    "description": "Headquarters",
+    "homepage": "https://hq.tat.red",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/codeigniter4/codeigniter4"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/lonnieezell/myth-auth"
+        }
+    ],
+   "require": {
+        "php": ">=7.2",
+        "codeigniter4/codeigniter4": "dev-develop",
+        "myth/auth": "dev-develop",
+        "tatter/addins": "^1.2",
+        "components/jquery": "^3.3",
+        "twbs/bootstrap": "^4.3",
+        "fortawesome/font-awesome": "^5.8"
+    },
+    "require-dev": {
+        "mikey179/vfsstream": "1.6.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "composer dump-autoload",
+            "./post-update.sh"
+        ]
+    }
+}
