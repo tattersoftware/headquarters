@@ -1,8 +1,4 @@
-<?php
-
-namespace App\Controllers;
-
-use CodeIgniter\Controller;
+<?php namespace App\Controllers;
 
 /**
  * Class BaseController
@@ -26,7 +22,7 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
-	protected $helpers = [ ];
+	protected $helpers = ['alerts', 'auth', 'inflector', 'themes'];
 
 	/**
 	 * Constructor.
