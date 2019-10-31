@@ -20,3 +20,14 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE &
  */
 
 defined('CI_DEBUG') || define('CI_DEBUG', 0);
+
+/*
+ *---------------------------------------------------------------
+ * SENTRY.IO
+ *---------------------------------------------------------------
+ * Initialize Sentry for exception reporting.
+ */
+if ($sentryUrl = env('sentryUrl'))
+{
+	Sentry\init(['dsn' => $sentryUrl]);
+}
