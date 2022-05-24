@@ -22,7 +22,7 @@
         "components/jquery": "^3.3",
         "twbs/bootstrap": "^4.3",
         "fortawesome/font-awesome": "^5.8",
-        "sentry/sdk": "2.0.3"
+        "sentry/sdk": "3.2.0"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
