@@ -21,7 +21,7 @@
         "tatter/addins": "^1.3",
         "components/jquery": "^3.3",
         "twbs/bootstrap": "^4.3",
-        "fortawesome/font-awesome": "^5.8",
+        "fortawesome/font-awesome": "^6.3",
         "sentry/sdk": "2.0.3"
     },
     "require-dev": {
